@@ -1,8 +1,11 @@
 #!/usr/bin/env python
-
+"""
+	You need python bindings for magic from the official
+	'file' package (http://www.darwinsys.com/file)
+	installed in order to run this.
+"""
 import string, sys, magic, textwrap
 
-# you need python bindings for magic installed in oder to run this
 ms = magic.open(magic.MAGIC_MIME)
 ms.load()
 
