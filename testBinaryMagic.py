@@ -4,7 +4,8 @@
 	'file' package (http://www.darwinsys.com/file)
 	installed in order to run this.
 """
-import string, sys, magic, textwrap
+
+import os, sys, magic, textwrap
 
 ms = magic.open(magic.MAGIC_MIME)
 ms.load()
@@ -44,7 +45,7 @@ def unkownOption(argv):
 	print textwrap.dedent(warning)
 
 def main(argv):
-	import os, getopt
+	import getopt
 	# look for optional arguments
 	try:
 		opts, dirnames = getopt.getopt(argv[1:], "h", ["help"])
